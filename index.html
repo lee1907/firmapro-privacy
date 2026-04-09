@@ -11,10 +11,15 @@
         h1 { color: #00BFA6; font-size: 28px; margin-bottom: 8px; }
         .subtitle { color: #888; font-size: 14px; margin-bottom: 32px; }
         h2 { color: #00BFA6; font-size: 20px; margin: 28px 0 12px; border-bottom: 1px solid #1E2D4A; padding-bottom: 8px; }
+        h3 { color: #80CBC4; font-size: 17px; margin: 20px 0 8px; }
         p, li { color: #CCC; font-size: 15px; margin-bottom: 12px; }
         ul { padding-left: 24px; margin-bottom: 16px; }
         li { margin-bottom: 6px; }
         .highlight { background: #1E2D4A; border-radius: 8px; padding: 16px; margin: 16px 0; border-left: 3px solid #00BFA6; }
+        .warning { background: #2D1E1E; border-radius: 8px; padding: 16px; margin: 16px 0; border-left: 3px solid #FF6B6B; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #1E2D4A; font-size: 14px; }
+        th { color: #00BFA6; font-weight: 600; }
         .contact { background: #1A1A2E; border-radius: 12px; padding: 24px; margin-top: 32px; text-align: center; }
         .contact a { color: #00BFA6; text-decoration: none; }
         .footer { text-align: center; margin-top: 40px; color: #666; font-size: 13px; }
@@ -23,81 +28,170 @@
 <body>
     <div class="container">
         <h1>FirmaPro Gizlilik Politikasi</h1>
-        <p class="subtitle">Son guncelleme: 26 Mart 2026</p>
+        <p class="subtitle">Son guncelleme: 9 Nisan 2026</p>
 
         <div class="highlight">
-            <p><strong>Ozet:</strong> FirmaPro, verilerinizi yalnizca cihazinizda (yerel depolama) saklar. Sunucuya veri gondermez, ucuncu taraflarla paylasmaz ve reklam gostermez.</p>
+            <p><strong>Ozet:</strong> FirmaPro, finansal verilerinizi cihazinizda sifrelenmis olarak saklar. Uygulama; kimlik dogrulama, analitik, kilitlenme raporlari, reklam ve uygulama ici satin alma islemleri icin ucuncu taraf hizmetlerden yararlanir. Bu politika, hangi verilerin toplandigi, nasil kullanildigi ve haklariniz hakkinda bilgi verir.</p>
         </div>
 
         <h2>1. Toplanan Veriler</h2>
-        <p>FirmaPro asagidaki verileri yalnizca cihazinizda yerel olarak saklar:</p>
+
+        <h3>1.1 Cihazda Yerel Olarak Saklanan Veriler</h3>
+        <p>Asagidaki veriler yalnizca cihazinizda sifrelenmis (Hive veritabani) olarak saklanir ve sunuculara gonderilmez:</p>
         <ul>
-            <li><strong>Hesap bilgileri:</strong> Ad, e-posta adresi (kayit icin)</li>
             <li><strong>Firma bilgileri:</strong> Firma adi, turu, vergi numarasi, adres, telefon</li>
             <li><strong>Finansal veriler:</strong> Gelir/gider kayitlari, banka hesaplari, cek/senet, kredi bilgileri</li>
             <li><strong>Proje verileri:</strong> Proje bilgileri, yatirim kalemleri, maliyet analizleri</li>
             <li><strong>Personel verileri:</strong> Calisan bilgileri, maas kayitlari</li>
+            <li><strong>Abonelik durumu:</strong> Mevcut plan tipi ve gecerlilik suresi</li>
         </ul>
 
-        <h2>2. Verilerin Saklanmasi</h2>
-        <p>Tum veriler yalnizca cihazinizin yerel depolama alanindan (Hive veritabani) saklanir. Verileriniz:</p>
+        <h3>1.2 Ucuncu Taraf Hizmetler Araciligiyla Toplanan Veriler</h3>
+        <table>
+            <tr>
+                <th>Veri Turu</th>
+                <th>Amac</th>
+                <th>Hizmet</th>
+            </tr>
+            <tr>
+                <td>Ad, e-posta, profil fotografi</td>
+                <td>Kimlik dogrulama</td>
+                <td>Firebase Authentication (Google Sign-In)</td>
+            </tr>
+            <tr>
+                <td>Uygulama etkilesim verileri</td>
+                <td>Kullanim analizi ve iyilestirme</td>
+                <td>Firebase Analytics</td>
+            </tr>
+            <tr>
+                <td>Kilitlenme raporlari, hata gunlukleri</td>
+                <td>Hata tespiti ve cozumu</td>
+                <td>Firebase Crashlytics</td>
+            </tr>
+            <tr>
+                <td>Cihaz tanimlayicilari, reklam kimligi (AD_ID)</td>
+                <td>Kisisellestrilmis reklam gosterimi</td>
+                <td>Google AdMob</td>
+            </tr>
+            <tr>
+                <td>Satin alma gecmisi</td>
+                <td>Abonelik yonetimi</td>
+                <td>Google Play Faturalandirma</td>
+            </tr>
+            <tr>
+                <td>Yapilandirma parametreleri</td>
+                <td>Uygulama ayarlarinin uzaktan yonetimi</td>
+                <td>Firebase Remote Config</td>
+            </tr>
+        </table>
+
+        <h2>2. Verilerin Kullanim Amaci</h2>
+        <p>Toplanan veriler asagidaki amaclarla kullanilir:</p>
         <ul>
-            <li>Hicbir sunucuya veya bulut hizmetine gonderilmez</li>
-            <li>Ucuncu taraf hizmetlerle paylasilmaz</li>
-            <li>Sifrelenmis olarak cihazinizda tutulur</li>
-            <li>Uygulamayi sildiginizde tamamen kaldirilir</li>
+            <li>Kullanici hesabinin olusturulmasi ve yonetimi</li>
+            <li>Uygulama islevlerinin sunulmasi (finansal yonetim, raporlama)</li>
+            <li>Abonelik ve satin alma islemlerinin yonetimi</li>
+            <li>Reklam gosterimi ve reklam geliri olusturulmasi</li>
+            <li>Uygulama performansinin izlenmesi ve iyilestirilmesi</li>
+            <li>Hatalarin tespiti ve giderilmesi</li>
+            <li>Uygulama ozelliklerinin uzaktan yapilandirilmasi</li>
         </ul>
 
-        <h2>3. Google ile Giris</h2>
-        <p>Google ile giris secenegini kullandiginizda:</p>
+        <h2>3. Reklamlar</h2>
+        <p>FirmaPro, reklam gosterimi icin <strong>Google AdMob</strong> hizmetini kullanir.</p>
         <ul>
-            <li>Yalnizca adiniz, e-posta adresiniz ve profil fotografiniz alinir</li>
-            <li>Bu bilgiler sadece cihazinizda saklanir</li>
-            <li>Google hesabiniza erisim izni istemez</li>
-            <li>Google'a herhangi bir veri gonderilmez</li>
+            <li><strong>Reklam turleri:</strong> Banner reklamlar, gecis (interstitial) reklamlar ve odullu (rewarded) reklamlar gosterilebilir</li>
+            <li><strong>Reklam kimligi:</strong> Google, reklam kisisellestirme icin cihazinizin reklam kimligini (Advertising ID) kullanabilir</li>
+            <li><strong>Abonelik planlarina gore reklam:</strong>
+                <ul>
+                    <li>Ucretsiz plan: Tum reklam turleri gosterilir</li>
+                    <li>Pro plan: Yalnizca sinirli banner reklamlar gosterilir</li>
+                    <li>Isletme plan: Hicbir reklam gosterilmez</li>
+                </ul>
+            </li>
+            <li><strong>Reklam tercihi:</strong> Cihazinizin ayarlarindan kisisellesitirilmis reklamlari kapatabilirsiniz</li>
         </ul>
+        <p>Google AdMob'un gizlilik politikasi: <a href="https://policies.google.com/privacy" style="color:#00BFA6;">policies.google.com/privacy</a></p>
 
-        <h2>4. Veri Guvenligi</h2>
-        <p>Verilerinizin guvenligini saglamak icin:</p>
+        <h2>4. Abonelikler ve Uygulama Ici Satin Almalar</h2>
+        <p>FirmaPro, abonelik tabanli bir fiyatlandirma modeli sunar:</p>
         <ul>
-            <li>Tum veriler cihaz uzerinde yerel olarak saklanir</li>
-            <li>Internet baglantisi gerektirmez (cevrimdisi calisir)</li>
-            <li>Uygulama icerisinde yedekleme ve geri yukleme ozelligi mevcuttur</li>
-            <li>Sifre ile korunmali hesap erisimi</li>
+            <li><strong>Odeme isleme:</strong> Tum odemeler Google Play Faturalandirma sistemi uzerinden gerceklestirilir. Kredi karti veya odeme bilgileriniz FirmaPro tarafindan toplanmaz veya saklanmaz</li>
+            <li><strong>Ucretsiz deneme:</strong> Bazi planlarda ucretsiz deneme suresi sunulabilir. Deneme suresi sonunda otomatik olarak ucretli abonelige gecis yapilir</li>
+            <li><strong>Abonelik iptali:</strong> Aboneliginizi istediginiz zaman Google Play Store uzerinden iptal edebilirsiniz</li>
+            <li><strong>Iade politikasi:</strong> Iadeler, Google Play'in iade politikasina tabidir</li>
         </ul>
 
         <h2>5. Ucuncu Taraf Hizmetler</h2>
-        <p>FirmaPro asagidaki ucuncu taraf hizmetleri kullanir:</p>
+        <p>FirmaPro asagidaki ucuncu taraf hizmetleri kullanir. Her birinin kendi gizlilik politikasi vardir:</p>
         <ul>
-            <li><strong>Google Sign-In:</strong> Yalnizca kimlik dogrulama amacli (opsiyonel)</li>
-        </ul>
-        <p>Bunun disinda hicbir ucuncu taraf analitik, reklam veya izleme hizmeti kullanilmamaktadir.</p>
-
-        <h2>6. Cocuklarin Gizliligi</h2>
-        <p>FirmaPro, 13 yasindan kucuk cocuklara yonelik degildir. Bilerek 13 yasindan kucuk cocuklardan kisisel bilgi toplamayiz.</p>
-
-        <h2>7. Kullanici Haklari</h2>
-        <p>Kullanicilarimiz su haklara sahiptir:</p>
-        <ul>
-            <li><strong>Verilere erisim:</strong> Tum verileriniz uygulama icerisinde goruntulenebilir</li>
-            <li><strong>Veri duzenleme:</strong> Tum kayitlar duzenlenebilir ve silinebilir</li>
-            <li><strong>Veri silme:</strong> Uygulamayi sildiginizde tum veriler kaldirilir</li>
-            <li><strong>Veri tasima:</strong> Yedekleme ozelligi ile verilerinizi disari aktarabilirsiniz</li>
+            <li><strong>Firebase Authentication:</strong> Kullanici kimlik dogrulama — <a href="https://firebase.google.com/support/privacy" style="color:#00BFA6;">Firebase Gizlilik</a></li>
+            <li><strong>Firebase Analytics:</strong> Kullanim istatistikleri — <a href="https://firebase.google.com/support/privacy" style="color:#00BFA6;">Firebase Gizlilik</a></li>
+            <li><strong>Firebase Crashlytics:</strong> Kilitlenme raporlari — <a href="https://firebase.google.com/support/privacy" style="color:#00BFA6;">Firebase Gizlilik</a></li>
+            <li><strong>Firebase Remote Config:</strong> Uzaktan yapilandirma — <a href="https://firebase.google.com/support/privacy" style="color:#00BFA6;">Firebase Gizlilik</a></li>
+            <li><strong>Firebase Storage:</strong> Dosya depolama — <a href="https://firebase.google.com/support/privacy" style="color:#00BFA6;">Firebase Gizlilik</a></li>
+            <li><strong>Google AdMob:</strong> Reklam gosterimi — <a href="https://policies.google.com/privacy" style="color:#00BFA6;">Google Gizlilik</a></li>
+            <li><strong>Google Play Faturalandirma:</strong> Satin alma islemleri — <a href="https://policies.google.com/privacy" style="color:#00BFA6;">Google Gizlilik</a></li>
         </ul>
 
-        <h2>8. Degisiklikler</h2>
-        <p>Bu gizlilik politikasi zaman zaman guncellenebilir. Degisiklikler bu sayfada yayinlanacaktir. Onemli degisiklikler icin uygulama icerisinde bildirim yapilacaktir.</p>
+        <h2>6. Veri Guvenligi</h2>
+        <p>Verilerinizin guvenligini saglamak icin asagidaki onlemler alinmistir:</p>
+        <ul>
+            <li>Yerel veriler sifrelenmis olarak saklanir (AES sifreleme)</li>
+            <li>Tum ag iletisimi HTTPS/TLS uzerinden gerceklestirilir</li>
+            <li>Firebase Authentication ile guvenli kimlik dogrulama</li>
+            <li>Uygulama icerisinde yedekleme ve geri yukleme ozelligi mevcuttur</li>
+        </ul>
 
-        <h2>9. Izinler</h2>
+        <h2>7. Veri Saklama ve Silme</h2>
+        <ul>
+            <li><strong>Yerel veriler:</strong> Uygulamayi cihazinizdan kaldirildiginda tum yerel veriler silinir</li>
+            <li><strong>Firebase verileri:</strong> Hesabinizi sildiginizde Firebase uzerindeki kimlik dogrulama verileriniz kaldirilir</li>
+            <li><strong>Hesap silme:</strong> Uygulama icerisindeki Ayarlar &gt; Hesap bolumunden hesabinizi ve tum iliskili verilerinizi kalici olarak silebilirsiniz</li>
+            <li><strong>Analitik verileri:</strong> Firebase Analytics verileri Google'in veri saklama politikalarina tabidir ve anonim olarak tutulur</li>
+        </ul>
+
+        <h2>8. KVKK Uyumu (6698 Sayili Kanun)</h2>
+        <p>FirmaPro, 6698 sayili Kisisel Verilerin Korunmasi Kanunu'na uygun olarak faaliyet gosterir. Bu kapsamda:</p>
+        <ul>
+            <li><strong>Veri sorumlusu:</strong> FirmaPro uygulama gelistirici ekibi</li>
+            <li><strong>Isleme amaci:</strong> Uygulama hizmetlerinin sunulmasi, iyilestirilmesi ve reklam gosterimi</li>
+            <li><strong>Hukuki dayanak:</strong> Acik riza, sozlesmenin ifasi ve mesru menfaat</li>
+            <li><strong>Yurt disi aktarim:</strong> Firebase ve Google hizmetleri araciligiyla veri, Google'in uluslararasi sunucularina aktarilabilir. Bu aktarim, KVKK'nin 9. maddesi kapsaminda acik rizaniza dayanir</li>
+        </ul>
+
+        <h2>9. Kullanici Haklari</h2>
+        <p>KVKK'nin 11. maddesi kapsaminda asagidaki haklara sahipsiniz:</p>
+        <ul>
+            <li>Kisisel verilerinizin islenip islenmedigini ogrenme</li>
+            <li>Kisisel verileriniz islenmisse buna iliskin bilgi talep etme</li>
+            <li>Kisisel verilerinizin islenmne amacini ve amacina uygun kullanilip kullanilmadigini ogrenme</li>
+            <li>Yurt icinde veya yurt disinda kisisel verilerinizin aktarildigi ucuncu kisileri bilme</li>
+            <li>Kisisel verilerinizin eksik veya yanlis islenmis olmasi halinde bunlarin duzeltilmesini isteme</li>
+            <li>Kisisel verilerinizin silinmesini veya yok edilmesini isteme</li>
+            <li>Islenen verilerin munhasiran otomatik sistemler vasitasiyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya cikmasina itiraz etme</li>
+            <li>Kisisel verilerinizin kanuna aykiri olarak islenmesi sebebiyle zarara ugramaniz halinde zararin giderilmesini talep etme</li>
+        </ul>
+        <p>Bu haklarinizi kullanmak icin asagidaki iletisim adresinden bize ulasabilirsiniz.</p>
+
+        <h2>10. Cocuklarin Gizliligi</h2>
+        <p>FirmaPro, 18 yasindan kucuk bireylere yonelik degildir. Bilerek 18 yasindan kucuk bireylerden kisisel bilgi toplamayiz. Boyle bir durumun tespiti halinde ilgili veriler derhal silinir.</p>
+
+        <h2>11. Izinler</h2>
         <p>FirmaPro asagidaki Android izinlerini kullanir:</p>
         <ul>
-            <li><strong>INTERNET:</strong> Google ile giris icin (opsiyonel)</li>
+            <li><strong>INTERNET:</strong> Firebase hizmetleri, reklam gosterimi ve Google ile giris icin</li>
+            <li><strong>BILLING:</strong> Uygulama ici satin alma islemleri icin</li>
+            <li><strong>AD_ID:</strong> Reklam kimligi erisimi icin</li>
         </ul>
         <p>Uygulama kamera, mikrofon, konum veya rehber erisimi istemez.</p>
 
+        <h2>12. Degisiklikler</h2>
+        <p>Bu gizlilik politikasi zaman zaman guncellenebilir. Onemli degisiklikler icin uygulama icerisinde bildirim yapilacaktir. Uygulamayi kullanmaya devam etmeniz, guncellenmis politikayi kabul ettiginiz anlamina gelir.</p>
+
         <div class="contact">
             <h2 style="border: none; margin-top: 0;">Iletisim</h2>
-            <p>Gizlilik politikamiz hakkinda sorulariniz icin:</p>
+            <p>Gizlilik politikamiz veya KVKK kapsamindaki haklariniz hakkinda sorulariniz icin:</p>
             <p><a href="mailto:firmapro.app@gmail.com">firmapro.app@gmail.com</a></p>
         </div>
 

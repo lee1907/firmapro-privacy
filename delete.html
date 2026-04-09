@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirmaPro - Hesap Silme</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0D0D0D; color: #E0E0E0; line-height: 1.7; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { color: #00BFA6; font-size: 28px; margin-bottom: 8px; }
+        .subtitle { color: #888; font-size: 14px; margin-bottom: 32px; }
+        h2 { color: #00BFA6; font-size: 20px; margin: 28px 0 12px; border-bottom: 1px solid #1E2D4A; padding-bottom: 8px; }
+        p, li { color: #CCC; font-size: 15px; margin-bottom: 12px; }
+        ul, ol { padding-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        .highlight { background: #1E2D4A; border-radius: 8px; padding: 16px; margin: 16px 0; border-left: 3px solid #00BFA6; }
+        .warning { background: #2D1E1E; border-radius: 8px; padding: 16px; margin: 16px 0; border-left: 3px solid #FF6B6B; }
+        .step { background: #1A1A2E; border-radius: 8px; padding: 16px; margin: 12px 0; }
+        .step-number { color: #00BFA6; font-weight: bold; font-size: 18px; }
+        .contact { background: #1A1A2E; border-radius: 12px; padding: 24px; margin-top: 32px; text-align: center; }
+        .contact a { color: #00BFA6; text-decoration: none; }
+        .footer { text-align: center; margin-top: 40px; color: #666; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FirmaPro Hesap ve Veri Silme</h1>
+        <p class="subtitle">Son guncelleme: 9 Nisan 2026</p>
+
+        <div class="highlight">
+            <p><strong>Ozet:</strong> FirmaPro hesabinizi ve tum iliskili verilerinizi uygulama icerisinden kalici olarak silebilirsiniz. Bu islem geri alinamaz.</p>
+        </div>
+
+        <h2>Uygulama Icerisinden Hesap Silme</h2>
+
+        <div class="step">
+            <p><span class="step-number">1.</span> FirmaPro uygulamasini acin</p>
+        </div>
+        <div class="step">
+            <p><span class="step-number">2.</span> Alt menuden <strong>Profil</strong> sekmesine gidin</p>
+        </div>
+        <div class="step">
+            <p><span class="step-number">3.</span> Sag ust kosedeki <strong>Ayarlar</strong> (disli ikonu) butonuna tiklayin</p>
+        </div>
+        <div class="step">
+            <p><span class="step-number">4.</span> Sayfanin altindaki <strong>"Hesap"</strong> bolumunde <strong>"Hesabi Sil"</strong> butonuna tiklayin</p>
+        </div>
+        <div class="step">
+            <p><span class="step-number">5.</span> Uyari mesajini okuyun ve <strong>"Devam Et"</strong> tiklayin</p>
+        </div>
+        <div class="step">
+            <p><span class="step-number">6.</span> Onay kutusuna <strong>"SIL"</strong> yazin ve <strong>"Hesabi Sil"</strong> butonuna tiklayin</p>
+        </div>
+
+        <h2>Silinen Veriler</h2>
+        <p>Hesabinizi sildiginizde asagidaki veriler kalici olarak silinir:</p>
+        <ul>
+            <li><strong>Hesap bilgileri:</strong> Ad, e-posta adresi, profil bilgileri</li>
+            <li><strong>Firma verileri:</strong> Tum firma bilgileri, vergi numaralari, adresler</li>
+            <li><strong>Finansal veriler:</strong> Gelir/gider kayitlari, banka hesaplari, cek/senet, kredi bilgileri</li>
+            <li><strong>Proje verileri:</strong> Proje bilgileri, yatirim kalemleri, maliyet analizleri</li>
+            <li><strong>Personel verileri:</strong> Calisan bilgileri, maas kayitlari</li>
+            <li><strong>Fatura ve teklifler:</strong> Olusturulan tum fatura ve teklif kayitlari</li>
+            <li><strong>AI sohbet gecmisi:</strong> Yapay zeka ile yapilan tum konusmalar</li>
+            <li><strong>Bulut yedekleri:</strong> Firebase Storage uzerindeki tum yedek dosyalari</li>
+            <li><strong>Abonelik bilgileri:</strong> Yerel abonelik kayitlari (Google Play aboneligi ayri olarak iptal edilmelidir)</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Onemli:</strong> Aktif bir aboneliginiz varsa, hesabinizi silmeden once Google Play Store &gt; Abonelikler bolumunden aboneliginizi iptal etmeniz gerekmektedir. Hesap silme islemi aboneligi otomatik olarak iptal etmez.</p>
+        </div>
+
+        <h2>Saklanan Veriler</h2>
+        <p>Hesap silme isleminden sonra asagidaki veriler belirli bir sure saklanabilir:</p>
+        <ul>
+            <li><strong>Firebase Analytics verileri:</strong> Anonim kullanim istatistikleri Google'in veri saklama politikasina gore saklanir (tipik olarak 14 ay)</li>
+            <li><strong>Crashlytics raporlari:</strong> Anonim kilitlenme raporlari 90 gun saklanir</li>
+        </ul>
+        <p>Bu veriler anonimdir ve kimliginizle iliskilendirilemez.</p>
+
+        <h2>E-posta ile Hesap Silme Talebi</h2>
+        <p>Uygulamaya erisiminiz yoksa veya teknik sorun yasiyorsaniz, asagidaki e-posta adresine hesap silme talebi gonderebilirsiniz:</p>
+
+        <div class="contact">
+            <p><a href="mailto:firmapro.app@gmail.com">firmapro.app@gmail.com</a></p>
+            <p style="margin-top: 12px; color: #888; font-size: 13px;">Talebinizde kayitli e-posta adresinizi belirtmeniz gerekmektedir. Silme islemi 3 is gunu icerisinde tamamlanir.</p>
+        </div>
+
+        <h2>Ilgili Baglantılar</h2>
+        <ul>
+            <li><a href="https://lee1907.github.io/firmapro-privacy/" style="color:#00BFA6;">Gizlilik Politikasi</a></li>
+            <li><a href="https://lee1907.github.io/firmapro-privacy/terms.html" style="color:#00BFA6;">Kullanim Sartlari</a></li>
+        </ul>
+
+        <div class="footer">
+            <p>&copy; 2026 FirmaPro. Tum haklari saklidir.</p>
+        </div>
+    </div>
+</body>
+</html>
